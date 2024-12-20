@@ -4,9 +4,12 @@ require 'functions.php';
 require 'Database.php';
 //require 'router.php';
 
-$db = new Database();
-$posts = $db->query("SELECT * FROM posts")->fetchAll(PDO::FETCH_ASSOC);
+$config = require('config.php');
+$db = new Database($config['database']);
 
-foreach ($posts as $post) {
-	echo '<li>' . $post['title'] . '</li>';
-}
+$id = $_GET['id'];
+$query = "SELECT * FROM posts WHERE id = :id";
+
+$posts = $db->query($query, [':id' => $id])->fetch();
+
+dd($posts);
