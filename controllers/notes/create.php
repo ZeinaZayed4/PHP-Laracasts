@@ -7,9 +7,9 @@ $db = new Database($config['database']);
 
 $heading = 'Create Note';
 
-if (!Validator::email('zeina')) {
-	dd('That is not a valid email.');
-}
+//if (!Validator::email('zeina')) {
+//	dd('That is not a valid email.');
+//}
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	$errors = [];
@@ -26,4 +26,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	}
 }
 
-require 'views/note-create.view.php';
+require 'views/notes/create.view.php';
