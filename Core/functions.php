@@ -1,5 +1,6 @@
 <?php
 
+use Core\Response;
 use JetBrains\PhpStorm\NoReturn;
 
 #[NoReturn] function dd($value): void
