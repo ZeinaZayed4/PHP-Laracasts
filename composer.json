@@ -1,0 +1,16 @@
+{
+    "name": "laptop/demo",
+    "authors": [
+        {
+            "name": "ZeinaZayed4",
+            "email": "zeinazayed@std.mans.edu.eg"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Core\\" : "Core/",
+            "Http\\": "Http/"
+        }
+    }
+}
